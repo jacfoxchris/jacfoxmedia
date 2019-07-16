@@ -1,0 +1,27 @@
+<article class="related-page mt{% if include.class %} {{ include.class }}{% endif %} wow fadeIn">
+  <a href="{{ include.link }}"></a>
+
+    <figure class="cover">
+      {% assign path = include.relatedpath %}
+      {% assign alt = include.alt %}
+      {% assign run = include.run %}
+      {% if run %}
+        {% responsive_image_block %}
+          path: {{ path }}
+          alt: {{ alt }}
+          {% if title %}
+            title: {{ title }}
+          {% endif %}
+        {% endresponsive_image_block %}
+      {% else %}
+        <img src="{{ include.relatedpath }}" alt="{{ include.alt }}" title= "{{ include.pagetitle }}" />
+      {% endif %}
+    </figure>
+
+    <div class="vp hp">
+      <h3 class="wow fadeInUp">{{ include.pagetitle }}</h3>
+      <h4 class="wow fadeInUp">{{ include.pagesubtitle }}</h4>
+      <p class="wow fadeInUp">{{ include.pagedesc }}</p>
+    </div>
+
+</article>

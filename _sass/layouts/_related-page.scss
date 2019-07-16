@@ -1,0 +1,47 @@
+article.related-page {
+  box-shadow: 0 0 50px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include transition-3;
+
+  figure {
+    height: 300px;
+    overflow: hidden
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    content: '';
+    z-index: 2
+  }
+
+  &:hover {
+    transform: scale(0.98,0.98);
+  }
+
+  &.top {
+    figure {
+      order: 1
+    }
+  }
+
+  &.dark-bg {
+    color: $color__white;
+
+    h3 {
+      color: $color__light-grey
+    }
+
+    h4 {
+      color: $color__white
+    }
+  }
+}

@@ -1,0 +1,25 @@
+figure {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 1/5
+  }
+  &.hero {
+    height: 80%;
+    position: relative;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+    display: grid
+  }
+  .container {
+    margin-top: -91px;
+    position: absolute;
+    bottom: 0
+  }
+  &#team-hero {
+    & h1 {
+      color: $color__white
+    }
+  }
+
+}

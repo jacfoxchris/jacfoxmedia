@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
+    {% if jekyll.environment == "production" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121898873-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-121898873-2');
+    </script>
+
+
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script async>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000d22",
+      "text": "#ffffff"
+    },
+    "button": {
+      "background": "#ed6b06",
+      "text": "#ffffff"
+    }
+  },
+  "theme": "edgeless",
+  "content": {
+    "message": "We use your data for evil things",
+    "dismiss": "Accept",
+    "deny": "Decline",
+    "link": "Privacy Policy",
+    "href": "/privacy"
+  }
+})});
+</script>
+  </head>
+  <body class="{{ page.class }}">
+    <div id="loader-wrapper">
+  		<div class="loader-section">
+  		</div>
+  		<div id="welcome" class="center hp textcenter">
+  			<div>
+  				<h1 class="fadeInLoad" data-wow-delay="0.2s">{{ page.title }}</h1>
+  				<img class="fadeInLoad" data-wow-delay="0.4s" src="/assets/images/brand/logo-black.svg">
+  			</div>
+  		</div>
+  	</div>
+    {% include header.html %}
+      {{ content }}
+    {% include footer.html %}
+  <script async type="text/javascript" src="/assets/js/custom.js"></script>
+  </body>
+</html>

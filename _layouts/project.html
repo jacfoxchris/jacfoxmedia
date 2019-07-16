@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% capture imagepath %}{{ page.image }}{% endcapture %}
+{% include hero.html id='branding-hero'
+path=imagepath
+alt='Jacfox Media Branding Hero Image'
+run=''
+%}
+<main>
+  <section class="vp">
+    <div class="container hp">
+      <p>{{ page.client }}</p>
+      {{ content }}
+    </div>
+  </section>
+  <section class="vp">
+    <div class="container hp">
+      {% include prevnext.html %}
+    </div>
+  </section>
+</main>

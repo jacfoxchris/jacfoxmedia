@@ -1,0 +1,21 @@
+<figure id="{{ include.id }}" class="hero cover">
+  {% assign path = include.path %}
+  {% assign alt = include.alt %}
+  {% assign title = include.title %}
+  {% assign run = include.run %}
+
+  {% if run %}
+    {% responsive_image_block %}
+      path: {{ path }}
+      alt: {{ alt }}
+      {% if title %}
+        title: {{ title }}
+      {% endif %}
+    {% endresponsive_image_block %}
+  {% else %}
+    <img src="{{ include.path }}" alt="{{ include.alt }}"  title= "{{ page.title }}" />
+  {% endif %}
+  <div class="container hp">
+    <h1>{{ page.title }}</h1>
+  </div>
+</figure>

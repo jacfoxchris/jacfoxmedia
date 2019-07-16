@@ -1,0 +1,17 @@
+footer#footer {
+  display: grid;
+  @include container-columns;
+  background: $color__black;
+
+  i {
+    width: 30px
+  }
+  span.dot {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    content:'';
+    margin: 0 10px;
+    background-color: transparentize($color__dark-grey, 0.2);
+  }
+}

@@ -1,0 +1,53 @@
+---
+title: Home Page
+class: home
+
+---
+{% include hero.html  id='home-hero'
+                      path='assets/images/hero/home-hero.jpg'
+                      alt='Jacfox Media Home Hero Image'
+                      run='' %}
+<main class="bp">
+  <section class="vp">
+    <div class="container hp vp">
+      <h3 class="wow fadeInUp">Who are we?</h3>
+      <h4 class="wow fadeInUp">Maybe we're the answer</h4>
+      <p class="wow fadeInUp">We're Jacfox Media, a creative boutique design studio based in Portsmouth, UK. We have taken the form of a dynamic duo with a wealth of experience, specialising in creating custom web solutions and brand identity systems that speaks to your audience. We are on a mission to unlock your next level in the never ending persuit of brand loyalty and consumer satisfaction. Do you share these values?</p>
+      <a href="/contact" class="button wow fadeInUp">Hire us!</a>
+      <div class="vp">
+        {% include work.html %}
+      </div>
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">How can we help you?</h2>
+      <p class="wow fadeInUp">Explore below what we're so damn good at</p>
+      <div class="col col-2">
+        <div class="bp">
+          {% include web-design.html %}
+        </div>
+        <div class="bp">
+          {% include branding.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp vp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">Find out more about us</h2>
+      <p class="wow fadeInUp">Explore below the wonders of our world</p>
+      {% include team.html %}
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp vp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">Think we could be a good fit?</h2>
+      <p class="wow fadeInUp">Describe your project and leave us your contact info</p>
+      {% include contact.html %}
+    </div>
+  </section>
+</main>

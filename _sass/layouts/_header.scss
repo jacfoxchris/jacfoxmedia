@@ -1,0 +1,127 @@
+header#masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+  padding: 60px 0;
+
+  .container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+
+  }
+
+  a.branding {
+    width: 240px;
+    z-index: 99999
+  }
+
+  picture {
+    display: grid;
+
+    svg * {
+      fill: $color__white
+    }
+
+    &.black svg * {
+      fill: $color__black
+    }
+  }
+
+  &.smaller {
+    // background-color: transparentize($color__black, 0.2) ;
+    picture svg {
+      * {
+        fill: $color__black
+      }
+
+      #Text {
+        display: none
+      }
+    }
+    #menu-toggle span {
+      background-color: $color__black
+    }
+  }
+  &.menu-open picture svg {
+    * {
+      fill: $color__black
+    }
+
+    #Text {
+      display: block
+    }
+  }
+}
+// body.logo-black #masthead.smaller {
+//   background-color: transparentize($color__light-grey, 0.2);
+// }
+#menu-toggle {
+  position: relative;
+  z-index: 9999;
+  display: grid;
+  justify-content: end;
+  grid-gap: 3px;
+  width: 27px;
+  padding: 10px 0;
+  justify-self: end;
+
+  span {
+    height: 2px;
+    border-radius: 10px;
+    justify-self: end;
+    background-color: $color__white;
+    @include transition-3;
+
+    &.one {
+      width: 27px
+    }
+
+    &.two {
+      width: 15px
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    span {
+      &.one {
+        width: 15px
+      }
+
+      &.two {
+        width: 27px
+      }
+    }
+  }
+
+  &.black {
+    span {
+      background-color: $color__black;
+    }
+  }
+  &.open {
+    span {
+      width: 27px;
+      background-color: $color__black;
+
+      &.one {
+        transform: translateY(2px) rotate(-45deg);
+      }
+      &.two {
+        transform: translateY(-3px) rotate(45deg);
+      }
+    }
+
+    &:hover {
+      span {
+        width: 27px;
+      }
+    }
+  }
+}

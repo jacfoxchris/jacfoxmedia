@@ -1,0 +1,77 @@
+---
+title: Contact
+class: contact
+---
+{% capture imageurl %}{{ site.url }}/assets/images/hero/contact-hero.svg{% endcapture %}
+{% include hero.html  id='contact-hero'
+path=imageurl
+alt='Jacfox Media Contact Hero Image'
+title='Contact'
+%}
+<main class="tp">
+  <section class="vp">
+    <div class="container hp vp col col-3">
+      <div class="">
+        <h2 class="wow fadeInUp">So you want to work together?</h2>
+        <p class="wow fadeInUp">Fill out our lovely form so we can get the ball rolling. Or feel free to send us an email directly, we'll get back to you.</p>
+        <div class="vp">
+          <i class="far fa-paper-plane f-l"></i> <a href="mailto:{{site.email}}" class="wow fadeInUp f-m">{{site.email}}</a>
+        </div>
+      </div>
+
+
+      <form class="wow fadeInRight" action="https://getsimpleform.com/messages?form_api_token=972c60a0e1c131c8b5955205fb655f70" method="post">
+        <div class="col center bp">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+        <!-- <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' /> -->
+        <!-- all your input fields here.... -->
+        <label>
+          What's your budget?
+          <div class="col col-2">
+            <input type="range" min="1" max="30" value="20" step="1" class="slider" id="myRange">
+            <p id="budget-output">£<span id="demo"></span>k</p>
+          </div>
+          <input id="budget" type="hidden" name="budget" value="" readonly>
+        </label>
+        <div class="col col-2">
+          <label>
+            <input type="text" name="first_name" placeholder="First Name" required />
+          </label>
+          <label>
+            <input type="text" name="last_name" placeholder="Last Name" required />
+          </label>
+        </div>
+        <label>
+          <input type="text" name="email" placeholder="Email Address" required />
+        </label>
+        <label>
+          <textarea type="text" name="content" rows="10" placeholder="Message" required></textarea>
+        </label>
+        <p class="bp">We care about your <a href="/privacy">privacy</a>, and we expect you do too. </p>
+        <input type='submit' value='Send' />
+      </form>
+    </div>
+  </section>
+</main>
+<script async type="text/javascript">
+  $(function(){
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    var budget = document.getElementById("budget");
+    var budgetoutput = document.getElementById("budget-output");
+
+    output.innerHTML = slider.value;
+    budget.value = slider.value;
+    slider.oninput = function() {
+      var val = slider.value / 30;
+      output.innerHTML = this.value;
+      budget.value = budgetoutput.innerHTML;
+      this.style.backgroundImage = '-webkit-gradient(linear, left top, right top, '
+      + 'color-stop(' + val + ', #ed6b06), '
+      + 'color-stop(' + val + ', #d3d4d3)'
+      + ')';
+    };
+  });
+</script>

@@ -1,0 +1,14 @@
+<article class="related-page {{ project.archiveclass }} wow fadeIn">
+  <a href="{{ project.url }}"></a>
+    <figure class="cover">
+        {% responsive_image_block %}
+          path: {{ project.image }}
+          alt: {{ project.title }}
+        {% endresponsive_image_block %}
+    </figure>
+    <div class="vp hp">
+      <h3 class="wow fadeInUp">{{ project.title }}</h3>
+      <h4 class="wow fadeInUp">{{ project.subtitle }}</h4>
+      <p class="wow fadeInUp">{{ project.desc }}</p>
+    </div>
+</article>

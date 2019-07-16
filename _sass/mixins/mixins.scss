@@ -1,0 +1,6 @@
+@mixin transition-3 {
+  transition: all ease 0.3s
+}
+@mixin container-columns {
+  grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+}

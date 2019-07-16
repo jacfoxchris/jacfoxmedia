@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-fam__title;
+  margin: 0.6em 0;
+}
+h1 span {
+  white-space: pre
+}
+h1,
+h3 {
+  font-size: $font-size__xl;
+  font-weight: $font-weight__black;
+  letter-spacing: 0.13em;
+  text-transform: uppercase
+}
+
+h2,
+h4 {
+  font-size: $font-size__l;
+  font-weight: $font-weight__bold;
+}
+
+h3 {
+  font-size: $font-size__s;
+  font-weight: $font-weight__black;
+  color: $color__grey
+}
+
+h4 {
+  font-size: $font-size__m;
+  margin: 0.4em 0
+}
+
+p {
+  margin: 0.6em 0
+}
+.f-m {
+  font-size: $font-size__m
+}
+.f-l {
+  font-size: $font-size__l
+}
+.f-xl {
+  font-size: $font-size__xl
+}

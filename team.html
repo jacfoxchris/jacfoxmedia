@@ -1,0 +1,101 @@
+---
+title: Team
+---
+{% include hero.html id='team-hero'
+path='assets/images/hero/team-hero.jpg'
+alt='Jacfox Media Team Hero Image'
+run=''
+%}
+<main class="bp">
+  <section class="vp">
+    <div class="container hp vp">
+      <h2>We'll smash your teeth in'</h2>
+      <p>Portsmouth based and surrounded by foxes. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis consequat ex, nec porta nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque porttitor turpis velit, sed convallis est blandit id. Fusce ut ipsum ipsum.</p>
+    </div>
+  </section>
+  <section class="vp">
+    <div class="container hp col col-2">
+      <div class="half wow fadeInLeft">
+        {% responsive_image_block %}
+          path: assets/images/hero/team-hero.jpg
+          alt: Jacfox Media Story
+        {% endresponsive_image_block %}
+        <!-- <img class="wow fadeInLeft" src="assets/images/hero/web-design-hero.svg" alt="Jacfox Media Web Design" data-wow-delay="1s"/> -->
+      </div>
+      <div class="half vp">
+        <span class="line wow stretchRight" data-wow-delay="0.2s"></span>
+        <h2 class="wow fadeInUp" data-wow-delay="0.3s">Story and Name</h2>
+        <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis consequat ex, nec porta nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque porttitor turpis velit, sed convallis est blandit id. Fusce ut ipsum ipsum.</p>
+      </div>
+    </div>
+  </section>
+  <section class="vp">
+    <div class="container hp vp col col-2">
+      <div class="half vp">
+        <span class="line wow stretchRight" data-wow-delay="0.2s"></span>
+        <h2 class="wow fadeInUp" data-wow-delay="0.3s">Office / Studio / Surrounding</h2>
+        <p class="wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis consequat ex, nec porta nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque porttitor turpis velit, sed convallis est blandit id. Fusce ut ipsum ipsum.</p>
+      </div>
+      <div class="half wow fadeInRight">
+        {% responsive_image_block %}
+          path: assets/images/hero/team-hero.jpg
+          alt: Jacfox Media Story
+        {% endresponsive_image_block %}
+      </div>
+    </div>
+  </section>
+  <section class="vp">
+    <div class="container hp">
+      <span class="line wow stretchRight" data-wow-delay="0.2s"></span>
+      <h2 class="wow fadeInUp" data-wow-delay="0.3s">Meet the team</h2>
+      <p class="wow fadeInUp" data-wow-delay="0.5s">We're nimble and cozy modest. pocket sized designers</p>
+    </div>
+    <div class="container vp col col-2">
+
+
+        {% for author in site.authors %}
+          <div class="hp vp">
+            <h3>{{ author.name }}</h3>
+            <h4>{{ author.position }}</h4>
+            <p>{{ author.content | markdownify }}</p>
+          </div>
+        {% endfor %}
+
+    </div>
+  </section>
+  <section class="vp">
+    <div class="container hp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">Maybe you're after something else?</h2>
+      <p class="wow fadeInUp">We've got something special lined up for you</p>
+      <div class="col">
+        <div class="bp">
+          {% include work.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="vp">
+    <div class="container hp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">How can we help you?</h2>
+      <p class="wow fadeInUp">Explore below what we're so damn good at</p>
+      <div class="col col-2">
+        <div class="bp">
+          {% include web-design.html %}
+        </div>
+        <div class="bp">
+          {% include branding.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp vp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">Think we could be a good fit?</h2>
+      <p class="wow fadeInUp">Describe your project and leave us your contact info</p>
+      {% include contact.html %}
+    </div>
+  </section>
+</main>

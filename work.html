@@ -1,0 +1,52 @@
+---
+title: Work
+class: work logo-black
+---
+
+<main class="vp">
+  <section class="vp">
+    <div class="container hp tp">
+      <div class="vp">
+        <h1>{{ page.title }}</h1>
+        <h2 class="wow fadeInUp tp">Some of our creations</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis consequat ex, nec porta nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque porttitor turpis velit, sed convallis est blandit id. Fusce ut ipsum ipsum.</p>
+      </div>
+      <div class="col col-2 bp">
+        {% for project in site.projects %}
+          {% include featured-project.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp vp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">Think we could be a good fit?</h2>
+      <p class="wow fadeInUp">Describe your project and leave us your contact info</p>
+      {% include contact.html %}
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp vp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">Find out more about us</h2>
+      <p class="wow fadeInUp">Explore below the wonders of our world</p>
+      {% include team.html %}
+    </div>
+  </section>
+  <section class="bp">
+    <div class="container hp">
+      <span class="line wow stretchRight"></span>
+      <h2 class="wow fadeInUp">How can we help you?</h2>
+      <p class="wow fadeInUp">Explore below what we're so damn good at</p>
+      <div class="col col-2">
+        <div class="bp">
+          {% include web-design.html %}
+        </div>
+        <div class="bp">
+          {% include branding.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

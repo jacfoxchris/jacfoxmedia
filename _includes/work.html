@@ -1,0 +1,11 @@
+{% for project in site.projects limit:1 %}
+  {% capture imagepath %}{{ project.image }}{% endcapture %}
+  {% include related-page.html pagetitle='Our Work'
+  pagesubtitle='Some of our creations'
+  pagedesc='Discover our featured projects'
+  relatedpath=imagepath
+  alt='Jacfox Media Work'
+  link='/work'
+  run=''
+  %}
+{% endfor %}
